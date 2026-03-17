@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BullBearMagnet</title>
+
+<style>
+body{
+  background:#0c0c0c;
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+  display:flex;
+  justify-content:center;
+  padding:40px;
+}
+
+.container{
+  max-width:650px;
+  background:#151515;
+  padding:40px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.logo{
+  width:150px;
+  height:150px;
+  margin-bottom:20px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.description{
+  color:#bdbdbd;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.description a{
+  color:#bdbdbd;
+  text-decoration:underline;
+}
+
+.description a:hover{
+  color:#00c896;
+}
+
+button{
+  padding:14px 20px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+
+.trial{
+  background:#00c896;
+  color:white;
+}
+
+.full{
+  background:#2b6cff;
+  color:white;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.4);
+}
+
+.form-section{
+  display:none;
+  margin-top:30px;
+  text-align:left;
+}
+
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  margin-bottom:14px;
+  border:none;
+  border-radius:6px;
+}
+
+.submit{
+  width:100%;
+  background:#00c896;
+  color:white;
+}
+
+.wallet-address{
+  cursor:pointer;
+  color:#ddd;
+  word-break:break-all;
+}
+
+.wallet-address:hover{
+  color:#00c896;
+}
+
+.footer{
+  margin-top:35px;
+  font-size:13px;
+  color:#888;
+  line-height:1.6;
+}
+
+/* ✅ MOBILE OPTIMIZATION */
+@media (max-width: 600px){
+
+  body{
+    padding:20px;
+  }
+
+  .container{
+    padding:25px 20px;
+    border-radius:12px;
+  }
+
+  .logo{
+    width:110px;
+    height:110px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+
+  .description{
+    font-size:13px;
+  }
+
+  button{
+    width:100%;
+    max-width:100%;
+    margin:8px 0;
+  }
+
+  input, textarea{
+    font-size:16px; /* prevents iOS zoom */
+  }
+
+  .footer{
+    font-size:12px;
+  }
+
+}
+</style>
+
+<script>
+function showTrial(){
+  document.getElementById("trialForm").style.display="block";
+  document.getElementById("fullForm").style.display="none";
+}
+
+function showFull(){
+  document.getElementById("fullForm").style.display="block";
+  document.getElementById("trialForm").style.display="none";
+}
+
+function copyWallet(){
+  const address="Ajg44pn3GhFKETB8JdXYTJevJKVbVcSwyHwVK9ksSnLy";
+  navigator.clipboard.writeText(address);
+  const msg=document.getElementById("copyWalletMsg");
+  msg.style.display="inline";
+  setTimeout(()=>{ msg.style.display="none"; },2000);
+}
+
+function copyEmail(){
+  const email="bullbearmagnet@gmail.com";
+  navigator.clipboard.writeText(email);
+  const msg=document.getElementById("copyEmailMsg");
+  msg.style.display="inline";
+  setTimeout(()=>{ msg.style.display="none"; },2000);
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.jpg" class="logo">
+<h1>BullBearMagnet</h1>
+
+<div class="description">
+✔ Bull/Bear flips across all coins & timeframes<br>
+✔ Key support/resistance “magnet” zones<br>
+✔ Helps filter fakeouts and trend traps<br><br>
+
+For full details visit 
+<a href="https://www.tradingview.com/script/4pyuPNmI-BullBearMagnet/" target="_blank" rel="noopener noreferrer">TradingView</a><br>
+
+Follow on 
+<a href="https://x.com/bullbearmagnet" target="_blank" rel="noopener noreferrer">X</a> for updates
+</div>
+
+<p style="color:#00c896; font-size:14px; margin-bottom:10px;">
+⚡ Invite-only indicator — trial requests are reviewed manually
+</p>
+
+<button class="trial" onclick="showTrial()">Start 7-Day Free Trial</button>
+<button class="full" onclick="showFull()">Unlock 1-Year Access</button>
+
+<!-- Trial Form -->
+<div id="trialForm" class="form-section">
+<form action="https://formsubmit.co/bullbearmagnet@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="BullBearMagnet Trial Signup">
+
+  <h3>Start 7-Day Free Trial</h3>
+
+  <label>Email</label>
+  <input type="email" name="Email" required>
+
+  <label>Your TradingView Username</label>
+  <input type="text" name="TradingView Username" required>
+
+  <button class="submit" type="submit">Submit Trial Request</button>
+</form>
+</div>
+
+<!-- Full Access Form -->
+<div id="fullForm" class="form-section">
+<form action="https://formsubmit.co/bullbearmagnet@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="BullBearMagnet 1-Year Signup">
+
+  <h3>Unlock 1-Year Access</h3>
+
+  <label>Email</label>
+  <input type="email" name="Email" required>
+
+  <label>Your TradingView Username</label>
+  <input type="text" name="TradingView Username" required>
+
+  <label>Transaction ID</label>
+  <input type="text" name="Transaction ID" required>
+
+  <div class="wallet">
+    Price: $199 USDT or USDC (SOL network)<br><br>
+    Send payment to:<br>
+    <span class="wallet-address" onclick="copyWallet()">
+      Ajg44pn3GhFKETB8JdXYTJevJKVbVcSwyHwVK9ksSnLy
+    </span>
+    <span id="copyWalletMsg" style="display:none; color:#00c896; margin-left:6px;">
+      Copied!
+    </span>
+  </div>
+
+  <button class="submit" type="submit">Submit Access Request</button>
+</form>
+</div>
+
+<div class="footer">
+BullBearMagnet — TradingView Indicator<br><br>
+
+Contact:
+<span class="wallet-address" onclick="copyEmail()">
+bullbearmagnet@gmail.com
+</span>
+<span id="copyEmailMsg" style="display:none; color:#00c896; margin-left:6px;">
+Copied!
+</span>
+
+<br>
+7-day full refund policy applies if you're not satisfied. Most requests are processed within 8 hours via TradingView invite-only script.
+</div>
+
+</div>
+
+</body>
+</html>
