@@ -35,6 +35,16 @@ body{
   margin-right:auto;
 }
 
+h1{
+  margin-bottom:6px;
+}
+
+.subtitle{
+  color:#bdbdbd;
+  font-size:15px;
+  margin-bottom:20px;
+}
+
 .description{
   color:#bdbdbd;
   font-size:14px;
@@ -42,13 +52,14 @@ body{
   margin-bottom:20px;
 }
 
-.description a{
-  color:#bdbdbd;
-  text-decoration:underline;
+.description a {
+  color: #00c896; 
+  text-decoration: none; 
+  pointer-events: auto; 
 }
-
-.description a:hover{
-  color:#00c896;
+.description a:hover {
+  color: #00c896; 
+  text-decoration: none;
 }
 
 button{
@@ -100,7 +111,7 @@ input, textarea{
 
 .wallet-address{
   cursor:pointer;
-  color:#ddd;
+  color:#ccc;
   word-break:break-all;
 }
 
@@ -115,7 +126,7 @@ input, textarea{
   line-height:1.6;
 }
 
-/* ✅ MOBILE OPTIMIZATION */
+/* MOBILE */
 @media (max-width: 600px){
 
   body{
@@ -142,12 +153,11 @@ input, textarea{
 
   button{
     width:100%;
-    max-width:100%;
     margin:8px 0;
   }
 
   input, textarea{
-    font-size:16px; /* prevents iOS zoom */
+    font-size:16px;
   }
 
   .footer{
@@ -192,40 +202,50 @@ function copyEmail(){
 <div class="container">
 
 <img src="logo.jpg" class="logo">
-<h1>BullBearMagnet</h1>
 
-<div class="description">
-✔ Bull/Bear flips across all coins & timeframes<br>
-✔ Key support/resistance “magnet” zones<br>
-✔ Helps filter fakeouts and trend traps<br><br>
-
-For full details visit 
-<a href="https://www.tradingview.com/script/4pyuPNmI-BullBearMagnet/" target="_blank" rel="noopener noreferrer">TradingView</a><br>
-
-Follow on 
-<a href="https://x.com/bullbearmagnet" target="_blank" rel="noopener noreferrer">X</a> for updates
+<h1>Stop guessing. Follow the trend.</h1>
+<div class="subtitle">
+A simple system to stay on the right side of the market
 </div>
 
-<p style="color:#00c896; font-size:14px; margin-bottom:10px;">
-⚡ Invite-only indicator — trial requests are reviewed manually
-</p>
+<div class="description">
+<span style="color:#00c896;">✔</span> Clear Bull & Bear trend flips across all coins & timeframes<br>
+<span style="color:#00c896;">✔</span> Key Support/Resistance “magnet” zones<br>
+<span style="color:#00c896;">✔</span> Helps filter fakeouts and trend traps<br>
+<span style="color:#00c896;">✔</span> 7-day free trial<br><br>
 
-<button class="trial" onclick="showTrial()">Start 7-Day Free Trial</button>
-<button class="full" onclick="showFull()">Unlock 1-Year Access</button>
+⚡ <span style="color:#00c896;">Instead of predicting tops and bottoms, focus on confirmation and trend direction</span><br>
+
+<button class="trial" onclick="showTrial()">Start Free Trial</button>
+<button class="full" onclick="showFull()">Unlock Full Access</button>
 
 <!-- Trial Form -->
 <div id="trialForm" class="form-section">
 <form action="https://formsubmit.co/863e9ef78dfae2b4ecfdac1637347154" method="POST">
   <input type="hidden" name="_captcha" value="true">
   <input type="hidden" name="_subject" value="BullBearMagnet Trial Signup">
-  <input type="hidden" name="Email" value="notification@bullbearmagnet.com">
 
-  <h3>Start 7-Day Free Trial</h3>
+  <h3><b>Start Free Trial</b></h3>
 
-  <label>Your TradingView Username</label>
+<p style="font-size:13px; color:#bdbdbd; line-height:1.5;">
+  You’ll get <b>7 days full access</b> to the indicator on 
+  <a href="https://www.tradingview.com/script/4pyuPNmI-BullBearMagnet/" target="_blank" style="color:#00c896; text-decoration:none;">
+    TradingView.</a><br>
+  Works on BTC, alts, and all timeframes.<br><br>
+
+  <span style="color:#00c896;">✔</span> No payment required<br>
+  <span style="color:#00c896;">✔</span> No commitment<br>
+  <span style="color:#00c896;">✔</span> Access usually granted within a few hours
+  </p>
+
+  <label><b>Your TradingView Username</b></label>
   <input type="text" name="TradingView Username" required>
 
-  <button class="submit" type="submit">Submit Trial Request</button>
+  <p style="font-size:12px; color:#888; margin-top:-8px; margin-bottom:12px;">
+  Used only to grant TradingView access.
+  </p>
+
+  <button class="submit" type="submit">Get Trial Access</button>
 </form>
 </div>
 
@@ -234,33 +254,65 @@ Follow on
 <form action="https://formsubmit.co/863e9ef78dfae2b4ecfdac1637347154" method="POST">
   <input type="hidden" name="_captcha" value="true">
   <input type="hidden" name="_subject" value="BullBearMagnet 1-Year Signup">
-  <input type="hidden" name="Email" value="notification@bullbearmagnet.com">
 
-  <h3>Unlock 1-Year Access</h3>
+  <h3><b>Unlock Full Access</b></h3>
 
-  <label>Your TradingView Username</label>
-  <input type="text" name="TradingView Username" required>
+  <p style="font-size:13px; color:#bdbdbd; line-height:1.5;">
+  You’ll get <b>1-year full access</b> to the indicator on
+  <a href="https://www.tradingview.com/script/4pyuPNmI-BullBearMagnet/" target="_blank" style="color:#00c896; text-decoration:none;">
+   TradingView.</a><br>
+  Works on BTC, alts, and all timeframes.<br><br>
 
-  <label>Transaction ID</label>
-  <input type="text" name="Transaction ID" required>
+  <span style="color:#00c896;">✔</span> Instant access after payment<br>
+  <span style="color:#00c896;">✔</span> 7-day full refund if not satisfied<br>
+  <span style="color:#00c896;">✔</span> Support available via email
+  </p>
 
-  <div class="wallet">
-    Price: $149 USDT or USDC (SOL network)<br><br>
-    Send payment to:<br>
-    <span class="wallet-address" onclick="copyWallet()">
-      Ajg44pn3GhFKETB8JdXYTJevJKVbVcSwyHwVK9ksSnLy
-    </span>
-    <span id="copyWalletMsg" style="display:none; color:#00c896; margin-left:6px;">
-      Copied!
-    </span>
+<div class="wallet" style="margin-top:10px;">
+
+  <div style="font-size:14px; color:#ccc; margin-bottom:6px;">
+    <b>Price: $149 / year</b>
   </div>
 
-  <button class="submit" type="submit">Submit Access Request</button>
+  <div style="font-size:13px; color:#aaa; margin-bottom:6px;">
+    Send USDT / USDC (SOL):
+  </div>
+
+  <span class="wallet-address" style="font-size:13px;" onclick="copyWallet()">
+    Ajg44pn3GhFKETB8JdXYTJevJKVbVcSwyHwVK9ksSnLy
+  </span>
+  <span id="copyWalletMsg" style="display:none; color:#00c896; margin-left:6px;">
+    Copied!
+  </span>
+
+  <p style="font-size:12px; color:#888; margin-top:10px;">
+    After payment, submit your TradingView Username and Transaction ID to receive access.
+  </p>
+
+  <label><b>Your TradingView Username</b></label>
+  <input type="text" name="TradingView Username" required>
+
+
+  <p style="font-size:12px; color:#888; margin-top:-8px; margin-bottom:12px;">
+  Used only to grant TradingView access.
+  </p>
+
+  <label><b>Transaction ID</b></label>
+  <input type="text" name="Transaction ID" required>
+
+  <p style="font-size:12px; color:#888; margin-top:-8px; margin-bottom:12px;">
+  Used to verify your payment and grant access.
+  </p>
+
+</div>
+
+  <button class="submit" type="submit">Unlock Access</button>
 </form>
 </div>
 
 <div class="footer">
-BullBearMagnet — TradingView Indicator<br><br>
+<a href="https://www.tradingview.com/script/4pyuPNmI-BullBearMagnet/" target="_blank">Invite-only TradingView Indicator</a><br>
+<a href="https://x.com/bullbearmagnet" target="_blank">Follow updates on X</a><br><br>
 
 Contact:
 <span class="wallet-address" onclick="copyEmail()">
@@ -271,10 +323,8 @@ Copied!
 </span>
 
 <br>
-7-day full refund policy applies if you're not satisfied. Most requests are processed within 8 hours via TradingView invite-only script.
+This is not a “get rich quick” tool.<br>
+It helps you follow the trend and avoid bad trades.
 </div>
-
-</div>
-
 </body>
 </html>
